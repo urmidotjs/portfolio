@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Urmi Tiwari - Portfolio</title>
+    <style>
+        /* Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        /* Dark Gray/Black Theme */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #0d0d0d;
+            color: #eee;
+            overflow-x: hidden;
+        }
+
+        /* Header Styling with Gradient */
+        header {
+            background: linear-gradient(135deg, #0d0d0d, #1a1a1a);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+            transition: background 0.5s ease;
+        }
+        header h1 {
+            font-size: 2.8em;
+            margin-bottom: 0.2em;
+            color: #1e90ff; /* Blue */
+            animation: glow 1.5s ease-in-out infinite alternate;
+        }
+        header p {
+            font-size: 1.1em;
+            color: #ddd;
+        }
+
+        /* Container Styling */
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 30px auto;
+            overflow: hidden;
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 1s ease forwards;
+        }
+
+        /* Section Styling */
+        .section {
+            margin-bottom: 30px;
+            padding: 20px;
+            background: #1a1a1a;
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+            transition: transform 0.3s;
+        }
+        .section:hover {
+            transform: translateY(-5px);
+        }
+        .section h2 {
+            color: #1e90ff; /* Blue */
+            font-size: 1.8em;
+            margin-bottom: 15px;
+        }
+
+        /* List and Link Styling */
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            margin-bottom: 10px;
+            line-height: 1.6;
+            color: #ccc;
+        }
+        .contact a {
+            color: #1e90ff;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        .contact a:hover {
+            color: #87cefa; /* Light Blue */
+        }
+
+        /* Footer Styling */
+        footer {
+            background-color: #1a1a1a;
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+            font-size: 0.9em;
+            border-top: 1px solid #333;
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        @keyframes glow {
+            from {
+                text-shadow: 0 0 5px #1e90ff, 0 0 10px #1e90ff, 0 0 20px #1e90ff;
+            }
+            to {
+                text-shadow: 0 0 10px #1e90ff, 0 0 20px #1e90ff, 0 0 30px #1e90ff;
+            }
+        }
+
+        /* Responsive Media Query */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2em;
+            }
+            header p {
+                font-size: 1em;
+            }
+            .section h2 {
+                font-size: 1.6em;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <h1>Urmi Tiwari</h1>
+        <p>Computer Science Engineering Student | Web Developer | Programmer</p>
+    </header>
+
+    <!-- About Section -->
+    <section class="container section" id="about">
+        <h2>About Me</h2>
+        <p>Final year Computer Science Engineering student looking for entry-level roles to use my skills in programming, web development, and data analysis from internships and projects.</p>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="container section" id="skills">
+        <h2>Skills</h2>
+        <ul>
+            <li><strong>Programming Languages:</strong> C, C++, Python, Java</li>
+            <li><strong>Web Technologies:</strong> HTML, CSS, JavaScript, React.js</li>
+            <li><strong>Database:</strong> SQL</li>
+            <li><strong>Concepts:</strong> Object-Oriented Programming (OOP), DBMS, OS, SDE, Networking</li>
+        </ul>
+    </section>
+
+    <!-- Education Section -->
+    <section class="container section" id="education">
+        <h2>Education</h2>
+        <ul>
+            <li><strong>Bachelor of Technology in Computer Science Engineering</strong> - Dr. Shakuntala Misra National Rehabilitation University, Lucknow (Dec 2021 - Jul 2025) | Scored: 66%</li>
+            <li><strong>Class 12th</strong> - Manisha International School, India (Mar 2007 - Jun 2021) | Scored: 62%</li>
+            <li><strong>Class 10th</strong> - Scored: 71%</li>
+        </ul>
+    </section>
+
+    <!-- Experience Section -->
+    <section class="container section" id="experience">
+        <h2>Experience</h2>
+        <ul>
+            <li><strong>Summer Intern</strong> - Northern Railway Rolling Stock Workshop Charbagh, Lucknow (Jun 2024 - Jul 2024)
+                <ul>
+                    <li>Developed software to manage employee service records and salary data entry.</li>
+                    <li>Conducted data feeding for employee payroll systems, enhancing accuracy and efficiency.</li>
+                </ul>
+            </li>
+        </ul>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="container section" id="projects">
+        <h2>Projects</h2>
+        <ul>
+            <li><strong>Employee Service Record Software:</strong> System to store and manage employee service details.</li>
+            <li><strong>Salary Data Feeding System:</strong> Automated data entry for payroll, reducing processing time.</li>
+        </ul>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="container section contact" id="contact">
+        <h2>Contact</h2>
+        <p>Email: <a href="mailto:urmitiwari1118@gmail.com">urmitiwari1118@gmail.com</a></p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/urmi-tiwari" target="_blank">linkedin.com/in/urmi-tiwari</a></p>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>© 2024 Urmi Tiwari</p>
+    </footer>
+
+</body>
+</html>
+
+
