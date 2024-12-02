@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Urmi Tiwari - Portfolio</title>
+    <!-- Google Fonts for styling -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
-        /* Reset */
         * {
             margin: 0;
             padding: 0;
@@ -13,239 +14,227 @@
             scroll-behavior: smooth;
         }
 
-        /* Dark Gray/Black Theme */
         body {
-            font-family: Arial, sans-serif;
-            background-color: #0d0d0d;
-            color: #eee;
+            font-family: 'Poppins', sans-serif;
+            background-color: #0A0F16;
+            color: #ECEFF4;
+            line-height: 1.6;
             overflow-x: hidden;
         }
 
-        /* Header Styling with Gradient */
         header {
-            background: linear-gradient(135deg, #0d0d0d, #1a1a1a);
-            color: white;
-            padding: 60px 20px;
             text-align: center;
-            transition: background 0.5s ease;
+            padding: 100px 20px;
+            background: #1C1E26;
+            color: white;
         }
+
         header h1 {
-            font-size: 2.8em;
-            margin-bottom: 0.2em;
-            color: #1e90ff; /* Blue */
-            animation: glow 1.5s ease-in-out infinite alternate;
-        }
-        header p {
-            font-size: 1.1em;
-            color: #ddd;
-        }
-
-        /* Container Styling */
-        .container {
-            width: 90%;
-            max-width: 1200px;
-            margin: 30px auto;
-            overflow: hidden;
-            opacity: 0;
-            transform: translateY(30px);
-            animation: fadeInUp 1s ease forwards;
-        }
-
-        /* Section Styling */
-        .section {
-            margin-bottom: 30px;
-            padding: 20px;
-            background: #1a1a1a;
-            border-radius: 8px;
-            box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
-            transition: transform 0.3s;
-        }
-        .section:hover {
-            transform: translateY(-5px);
-        }
-        .section h2 {
-            color: #1e90ff; /* Blue */
-            font-size: 1.8em;
-            margin-bottom: 15px;
-        }
-
-        /* List and Link Styling */
-        ul {
-            list-style-type: none;
-            padding: 0;
-        }
-        li {
+            font-size: 3.5rem;
+            font-weight: 600;
+            color: #00ADB5;
             margin-bottom: 10px;
-            line-height: 1.6;
-            color: #ccc;
         }
-        .contact a {
-            color: #1e90ff;
+
+        header p {
+            font-size: 1.2rem;
+            color: #B2B9C7;
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background: #00ADB5;
+            color: #121212;
+            border: none;
+            border-radius: 50px;
+            font-size: 1rem;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background 0.3s ease, transform 0.3s ease;
+        }
+
+        .btn:hover {
+            background: #67E8E0;
+            transform: translateY(-3px);
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        section {
+            margin-bottom: 50px;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            color: #00ADB5;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .section-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .card {
+            background: #1C1E26;
+            padding: 20px;
+            border-radius: 10px;
+            width: 100%;
+            max-width: 350px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6);
+        }
+
+        .card h3 {
+            color: #67E8E0;
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            color: #B2B9C7;
+            font-size: 1rem;
+            line-height: 1.5;
+        }
+
+        .card a {
+            display: inline-block;
+            margin-top: 10px;
+            color: #00ADB5;
+            font-weight: 600;
             text-decoration: none;
             transition: color 0.3s ease;
         }
-        .contact a:hover {
-            color: #87cefa; /* Light Blue */
+
+        .card a:hover {
+            color: #67E8E0;
         }
 
-        /* Footer Styling */
         footer {
-            background-color: #1a1a1a;
-            color: white;
             text-align: center;
-            padding: 15px 0;
-            font-size: 0.9em;
-            border-top: 1px solid #333;
+            padding: 20px;
+            background: #1C1E26;
+            color: #B2B9C7;
         }
 
-        /* Animations */
-        @keyframes fadeInUp {
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-        @keyframes glow {
-            from {
-                text-shadow: 0 0 5px #1e90ff, 0 0 10px #1e90ff, 0 0 20px #1e90ff;
-            }
-            to {
-                text-shadow: 0 0 10px #1e90ff, 0 0 20px #1e90ff, 0 0 30px #1e90ff;
-            }
+        footer a {
+            color: #00ADB5;
+            text-decoration: none;
+            transition: color 0.3s;
         }
 
-        /* Responsive Media Query */
+        footer a:hover {
+            color: #67E8E0;
+        }
+
+        /* Here, I will target the email and GitHub links in the Contact Section to make sure both links are consistent */
+        #contact a {
+            color: #00ADB5; 
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        #contact a:hover {
+            color: #67E8E0; 
+        }
+
         @media (max-width: 768px) {
             header h1 {
-                font-size: 2em;
+                font-size: 2.5rem;
             }
-            header p {
-                font-size: 1em;
-            }
-            .section h2 {
-                font-size: 1.6em;
+
+            .section-content {
+                flex-direction: column;
             }
         }
     </style>
 </head>
 <body>
 
-    <!-- Header Section -->
-    <header>
-        <h1>Urmi Tiwari</h1>
-        <p>Computer Science Engineering Student | Web Developer | Programmer</p>
-    </header>
+<header>
+    <h1>Urmi Tiwari</h1>
+    <p>Web Developer| Programmer | Still a Learner</p>
+    <a href="#contact" class="btn">Contact Me</a>
+</header>
 
-    <!-- About Section -->
-    <section class="container section" id="about">
-        <h2>About Me</h2>
-        <p>Final year Computer Science Engineering student looking for entry-level roles to use my skills in programming, web development, and data analysis from internships and projects.</p>
-    </section>
-
-    <!-- Skills Section -->
-<section class="container section" id="skills">
-    <h2>Skills</h2>
-    <ul>
-        <li><strong>Programming Languages:</strong> C, C++, Python, Java</li>
-        <li><strong>Web Technologies:</strong> HTML, CSS, JavaScript, React.js, Node.js, Express.js,RESTful APIs, Authentication (JWT, OAuth)</li>
-        <li><strong>Database:</strong> MySQL, MongoDB</li>
-        <li><strong>Concepts:</strong> Object-Oriented Programming (OOP), DBMS, OS, SDE, Networking</li>
-    </ul>
+<section id="about">
+    <div class="container">
+        <h2 class="section-title">About Me</h2>
+        <p style="text-align: center;">
+            I'm Urmi, a web developer and a final-year Computer Science Engineering student. I specialize in building responsive websites and web apps.
+    </div>
 </section>
 
-
-    <!-- Education Section -->
-    <section class="container section" id="education">
-        <h2>Education</h2>
-        <ul>
-            <li><strong>Bachelor of Technology in Computer Science Engineering</strong> - Dr. Shakuntala Misra National Rehabilitation University, Lucknow (Dec 2021 - Jul 2025) | Scored: 66%</li>
-            <li><strong>Class 12th</strong> - Manisha International School, India (Mar 2007 - Jun 2021) | Scored: 62%</li>
-            <li><strong>Class 10th</strong> - Scored: 71%</li>
-        </ul>
-    </section>
-
-    <!-- Experience Section -->
-<section class="container section" id="experience">
-    <h2>Experience</h2>
-    <ul>
-        <li>
-            <strong>Web Developer Intern</strong> - CodeClause 
-            (Ongoing)
-            <ul>
-                <li>Gained hands-on experience in front-end and back-end web development.</li>
-                <li>Working on building responsive and user-friendly web applications.</li>
-                <li>
-                    View Internship Offer Letter: 
-                    <a href="https://www.linkedin.com/posts/urmi-tiwari_codeclauseofferletter-activity-7268645434179411968-Jtx4?utm_source=share&utm_medium=member_desktop" 
-                       target="_blank">
-                        Click here
-                    </a>
-                </li>
-            </ul>
-        </li>
-        <li>
-            <strong>Summer Intern</strong> - Northern Railway Rolling Stock Workshop Charbagh, Lucknow 
-            (Jun 2024 - Jul 2024)
-            <ul>
-                <li>Worked on a software to manage employee service records and salary data entry.</li>
-                <li>Conducted data feeding for employee payroll systems, enhancing accuracy and efficiency.</li>
-                <li>
-                    View Internship Certificate: 
-                    <a href="https://www.linkedin.com/posts/urmi-tiwari_rollingstockworkshop-northernrailways-internship-activity-7223966662838960128-dRYT?utm_source=share&utm_medium=member_desktop" 
-                       target="_blank">
-                        Click here
-                    </a>
-                </li>
-            </ul>
-        </li>
-        <li>
-            <strong>Associate Recruiter</strong> - eTeam (On-Campus Selection, Nov 2024)
-            <ul>
-                <li>Secured the role through competitive hiring, demonstrating communication and problem-solving skills.</li>
-            </ul>
-        </li>
-    </ul>
+<section id="skills">
+    <div class="container">
+        <h2 class="section-title">Skills</h2>
+        <div class="section-content">
+            <div class="card">
+                <h3>Programming Languages</h3>
+                <p>C, C++, Python, Java</p>
+            </div>
+            <div class="card">
+                <h3>Web Technologies</h3>
+                <p>HTML, CSS, JavaScript, React.js, Node.js</p>
+            </div>
+            <div class="card">
+                <h3>Database</h3>
+                <p>MySQL, MongoDB</p>
+            </div>
+        </div>
+    </div>
 </section>
 
-
-    <!-- Projects Section -->
-    <section class="container section" id="projects">
-        <h2>Projects</h2>
-        <ul>
-           <li>
-           <a href="https://urmidotjs.github.io/StackForge/" target="_blank">
-              <strong>StackForge:</strong>
-            </a>
-            A Web Application offering free resources to learn Web Development.
-        </li>
-
-
-            <li>
-            <a href="https://urmidotjs.github.io/NextGenResume/" target="_blank">
-                <strong>NextGenResume:</strong>
-            </a> 
-            Python-based tool for automated PDF resume creation.
-        </li>
-        </ul>
-    </section>
-
-    <!-- Contact Section -->
-    <section class="container section contact" id="contact">
-    <h2>Contact</h2>
-    <p>Contact no: <a href="tel:+918436974814">+91 8436974814</a></p>
-    <p>Email: <a href="mailto:urmitiwari1118@gmail.com">urmitiwari1118@gmail.com</a></p>
-    <p>LinkedIn: <a href="https://www.linkedin.com/in/urmi-tiwari" target="_blank">linkedin.com/in/urmi-tiwari</a></p>
-    <p>GitHub: <a href="https://github.com/urmidotjs" target="_blank">github.com/urmidotjs</a></p>
+<section id="projects">
+    <div class="container">
+        <h2 class="section-title">Projects</h2>
+        <div class="section-content">
+            <div class="card">
+                <h3>StackForge</h3>
+                <p>
+                    A web app providing free learning resources for aspiring web developers.
+                </p>
+                <a href="https://urmidotjs.github.io/StackForge/" target="_blank">View Project</a>
+               </div>
+            <div class="card">
+                <h3>Resume Builder</h3>
+                <p>
+                    An automated tool to create professional resumes in seconds based on user input.
+                </p>
+                <a href="https://urmidotjs.github.io/NextGenResume/" target="_blank">View Project</a>
+            </div>
+        </div>
+    </div>
 </section>
 
+<section id="contact">
+    <div class="container">
+        <h2 class="section-title">Contact</h2>
+        <p style="text-align: center;">
+            Email: <a href="mailto:urmitiwari1118@gmail.com">urmitiwari1118@gmail.com</a><br>
+            GitHub: <a href="https://github.com/urmidotjs" target="_blank">github.com/urmidotjs</a>
+        </p>
+    </div>
+</section>
 
-    <!-- Footer Section -->
-   <footer>
-    <p>© 2024 <a href="https://github.com/urmidotjs" target="_blank">Urmi Tiwari</a></p>
+<footer>
+    <p>© 2024 Urmi Tiwari | <a href="https://github.com/urmidotjs" target="_blank">GitHub</a></p>
 </footer>
-
 
 </body>
 </html>
-
-
